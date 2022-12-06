@@ -35,7 +35,7 @@ const MyChats = ({ fetchAgain }) => {
       };
 
       const { data } = await axios.get(
-        "https://mern-app-md.herokuapp.com/api/chat",
+        "https://api-chat-app-md.vercel.app/api/chat",
         config
       );
       setChats(data);

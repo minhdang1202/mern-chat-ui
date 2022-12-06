@@ -38,7 +38,7 @@ const Login = () => {
       };
 
       const { data } = await axios.post(
-        "https://mern-app-md.herokuapp.com/api/user/login",
+        "https://api-chat-app-md.vercel.app/api/user/login",
         { email, password },
         config
       );

@@ -63,7 +63,7 @@ const GroupChatModal = ({ children }) => {
         },
       };
       const { data } = await axios.get(
-        `https://mern-app-md.herokuapp.com/api/user?search=${query}`,
+        `https://api-chat-app-md.vercel.app/api/user?search=${query}`,
         config
       );
       setLoading(false);
@@ -103,7 +103,7 @@ const GroupChatModal = ({ children }) => {
         },
       };
       const { data } = await axios.post(
-        `https://mern-app-md.herokuapp.com/api/chat/group`,
+        `https://api-chat-app-md.vercel.app/api/chat/group`,
         {
           name: groupChatName,
           users: JSON.stringify(selectedUsers.map((u) => u._id)),

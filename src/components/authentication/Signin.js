@@ -51,7 +51,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "https://mern-app-md.herokuapp.com/api/user",
+        "https://api-chat-app-md.vercel.app/api/user",
         {
           name,
           email,

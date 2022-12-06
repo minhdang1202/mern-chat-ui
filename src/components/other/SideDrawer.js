@@ -78,7 +78,7 @@ const SideDrawer = () => {
       };
 
       const { data } = await axios.get(
-        `https://mern-app-md.herokuapp.com/api/user?search=${search}`,
+        `https://api-chat-app-md.vercel.app/api/user?search=${search}`,
         config
       );
 
@@ -106,7 +106,7 @@ const SideDrawer = () => {
         },
       };
       const { data } = await axios.post(
-        `https://mern-app-md.herokuapp.com/api/chat`,
+        `https://api-chat-app-md.vercel.app/api/chat`,
         { userId },
         config
       );

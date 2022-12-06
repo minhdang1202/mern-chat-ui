@@ -53,7 +53,7 @@ const UpdateGroupChatModal = ({
         },
       };
       const { data } = await axios.get(
-        `https://mern-app-md.herokuapp.com/api/user?search=${search}`,
+        `https://api-chat-app-md.vercel.app/api/user?search=${search}`,
         config
       );
       setLoading(false);
@@ -82,7 +82,7 @@ const UpdateGroupChatModal = ({
         },
       };
       const { data } = await axios.put(
-        `https://mern-app-md.herokuapp.com/api/chat/rename`,
+        `https://api-chat-app-md.vercel.app/api/chat/rename`,
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
@@ -141,7 +141,7 @@ const UpdateGroupChatModal = ({
         },
       };
       const { data } = await axios.put(
-        `https://mern-app-md.herokuapp.com/api/chat/groupadd`,
+        `https://api-chat-app-md.vercel.app/api/chat/groupadd`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -186,7 +186,7 @@ const UpdateGroupChatModal = ({
         },
       };
       const { data } = await axios.put(
-        `https://mern-app-md.herokuapp.com/api/chat/groupremove`,
+        `https://api-chat-app-md.vercel.app/api/chat/groupremove`,
         {
           chatId: selectedChat._id,
           userId: user1._id,

@@ -17,7 +17,7 @@ import UpdateGroupChatModal from "./other/UpdateGroupChatModal";
 import { ChatState } from "../context/ChatProvider";
 
 // const ENDPOINT = "http://localhost:5000";
-const ENDPOINT = "https://mern-app-md.herokuapp.com/";
+const ENDPOINT = "https://api-chat-app-md.vercel.app/";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -68,7 +68,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       };
       setLoading(true);
       const { data } = await axios.get(
-        `https://mern-app-md.herokuapp.com/api/message/${selectedChat._id}`,
+        `https://api-chat-app-md.vercel.app/api/message/${selectedChat._id}`,
         config
       );
       setMessages(data);
@@ -99,7 +99,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "https://mern-app-md.herokuapp.com/api/message",
+          "https://api-chat-app-md.vercel.app/api/message",
           {
             content: newMessage,
             chatId: selectedChat,
